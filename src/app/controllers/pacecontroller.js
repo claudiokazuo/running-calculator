@@ -2,8 +2,7 @@ class PaceController {
     static route = '/pace'             
 
     calculate(time, distance) {
-        return (req, res) => {
-            console.log(req.body)
+        return (req, res) => {            
             let body = req.body            
             let totalTimeInMinutes = (body.hours * 60) + body.minutes + (body.seconds/60)            
             let avgPaceInMinutes = totalTimeInMinutes/body.distance;    
