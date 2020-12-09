@@ -1,4 +1,4 @@
-const TimeController = require('../src/api/components/time/controller')
+const TimeController = require('./controller')
 
 module.exports = (app) => {
     const controller = new TimeController()

@@ -1,4 +1,4 @@
-const DistanceController = require('../src/api/components/distance/controller')
+const DistanceController = require('./controller')
 
 module.exports = (app) => {
     const controller = new DistanceController()    
