@@ -257,15 +257,15 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "31"
+							"value": "19"
 						},
 						{
 							"key": "ETag",
-							"value": "W/\"1f-Nt/DgUqshkhEKwYAvR0Se29kZIE\""
+							"value": "W/\"13-yDjlxrrBlYsb6TZuImSG30umkyQ\""
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 09 Dec 2020 11:04:01 GMT"
+							"value": "Wed, 09 Dec 2020 12:00:27 GMT"
 						},
 						{
 							"key": "Connection",
@@ -277,7 +277,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"distance\": 42.195055195693826\n}"
+					"body": "{\n    \"distance\": 42.195\n}"
 				}
 			]
 		}
