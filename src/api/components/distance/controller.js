@@ -1,5 +1,5 @@
-const Pace = require('../models/pace')
-const Time = require('../models/time')
+const Pace = require('../pace/model')
+const Time = require('../time/model')
 
 class DistanceController {
     static route = '/distance'
@@ -11,7 +11,7 @@ class DistanceController {
             const pace = new Pace(paceBody.minutes, paceBody.seconds, paceBody.milliseconds)
             const time = new Time(timeBody.hours, timeBody.minutes, timeBody.seconds)
             let distance = time.inSeconds()/pace.inSeconds()
-            res.status(200).json({distance: distance})
+            res.status(200).json({distance: Number(distance.toFixed(3))})
         }
     }
 }

@@ -1,4 +1,4 @@
-const PaceController = require('../src/app/controllers/pacecontroller')
+const PaceController = require('../src/api/components/pace/controller')
 
 module.exports = (app) => {
     const controller = new PaceController()

@@ -1,5 +1,5 @@
-const Pace = require('../models/pace')
-const Time = require('../models/time')
+const Pace = require('./model')
+const Time = require('../time/model')
 class PaceController {
     static route = '/pace'             
 

@@ -1,4 +1,4 @@
-const customExpress = require('./config/custom-express')
+const customExpress = require('./src/config/global')
 
 const app = customExpress()
 const port = 3000
