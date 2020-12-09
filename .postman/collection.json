@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "178c1002-cff4-4b38-9fd5-465a48c9e78f",
+		"name": "Running Calculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Calculate Total Run Time",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"minutes\": 5,\r\n    \"seconds\": 50,\r\n    \"milliseconds\": 752,\r\n    \"distance\":42.195\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/time",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"time"
+					]
+				},
+				"description": "\t\t"
+			},
+			"response": [
+				{
+					"name": "Calculate Total Run Time",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"minutes\": 5,\r\n    \"seconds\": 50,\r\n    \"milliseconds\": 752,\r\n    \"distance\":42.195\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/time",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"time"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-tcHoo+8qFTSp+OnYpJj1e1eGQLo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 09 Dec 2020 11:14:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"hours\": 4,\n    \"minutes\": 6,\n    \"seconds\": 39.98\n}"
+				}
+			]
+		},
+		{
+			"name": "Calculate Average Pace",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hours\" : 4,\r\n    \"minutes\": 6,\r\n    \"seconds\": 40,\r\n    \"distance\": 42.195\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pace"
+					]
+				},
+				"description": "\t\t"
+			},
+			"response": [
+				{
+					"name": "Calculate Average Pace",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hours\" : 4,\r\n    \"minutes\": 6,\r\n    \"seconds\": 40,\r\n    \"distance\": 42.195\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/pace",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pace"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "116"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"74-ru36RRz39TcvtkhJehiXBWVxW7Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 09 Dec 2020 11:14:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"pace\": {\n        \"minutes\": 5,\n        \"seconds\": 50,\n        \"milliseconds\": 752\n    },\n    \"distance\": 42.195,\n    \"time\": {\n        \"hours\": 4,\n        \"minutes\": 6,\n        \"seconds\": 40\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Calculate Total Run Distance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pace\": {\r\n        \"minutes\": 5,\r\n        \"seconds\": 50,\r\n        \"milliseconds\": 752\r\n    },\r\n    \"time\": {\r\n        \"hours\": 4,\r\n        \"minutes\": 6,\r\n        \"seconds\": 40\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/distance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"distance"
+					]
+				},
+				"description": "\t\t"
+			},
+			"response": [
+				{
+					"name": "Calculate Total Run Distance",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pace\": {\r\n        \"minutes\": 5,\r\n        \"seconds\": 50,\r\n        \"milliseconds\": 752\r\n    },\r\n    \"time\": {\r\n        \"hours\": 4,\r\n        \"minutes\": 6,\r\n        \"seconds\": 40\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/distance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"distance"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f-Nt/DgUqshkhEKwYAvR0Se29kZIE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 09 Dec 2020 11:04:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"distance\": 42.195055195693826\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "02af6f93-fc85-403d-bc31-3f20e899bb92",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7e84c146-b84b-4e97-bf39-0ffe8a965c7a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

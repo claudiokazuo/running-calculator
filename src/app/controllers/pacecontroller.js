@@ -1,28 +1,23 @@
+const Pace = require('../models/pace')
+const Time = require('../models/time')
 class PaceController {
     static route = '/pace'             
 
-    calculate(time, distance) {
+    calculate() {
         return (req, res) => {            
-            let body = req.body            
-            let totalTimeInMinutes = (body.hours * 60) + body.minutes + (body.seconds/60)            
-            let avgPaceInMinutes = totalTimeInMinutes/body.distance;    
+            const body = req.body            
+            const time = new Time(body.hours, body.minutes, body.seconds)    
+            let avgPaceInMinutes = time.inMinutes()/body.distance;    
             let minutes = parseInt(avgPaceInMinutes)      
             let seconds = parseInt((avgPaceInMinutes - minutes) * 60)
             let milliseconds = parseInt(((avgPaceInMinutes- minutes)*60 - seconds) * 1000)
-
+            const pace = new Pace(minutes, seconds, milliseconds)  
+              
             res.status(200).json(
                 {
-                    pace: {
-                        minutes: minutes,
-                        seconds: seconds,
-                        milliseconds: milliseconds
-                    },                    
+                    pace: pace,             
                     distance: body.distance,
-                    time: {
-                        hours : body.hours,
-                        minutes : body.minutes,
-                        seconds: body.seconds
-                    }
+                    time: time
                 })
         }
     }
