@@ -1,15 +1,10 @@
-const express = require('express')
 const bodyParser = require('body-parser')
-const consign = require('consign')
+const routes = require('../routes/index')
+const express = require('express')
 
 module.exports = () => {
     const app = express()
-
     app.use(bodyParser.json())
-
-    consign()
-        .include('routes')
-        .into(app)
-
+    routes(app)    
     return app
 }
